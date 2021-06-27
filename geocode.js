@@ -21,7 +21,7 @@ const geocode = (address) => {
     };
 
     var send1 = https.request(reqdetails1, (res) => {
-      console.log(res.statusCode);
+  
       let buffer1 = "";
       res.on("data", function (d) {
         buffer1 = buffer1 + decoder.write(d);
