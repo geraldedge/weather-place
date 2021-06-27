@@ -7,6 +7,7 @@ const geocode = require("./geocode");
 const pathdir = path.join(__dirname, "/templates/");
 const pathdir1 = path.join(__dirname, "/styles/");
 const StringDecoder = require("string_decoder").StringDecoder;
+const port =process.env.PORT || 3000
 var server = http.createServer((req, res) => {
   var parsedURL = url.parse(req.url, true);
 
@@ -74,7 +75,7 @@ var server = http.createServer((req, res) => {
   });
 });
 
-server.listen(3000, () => {
+server.listen(port, () => {
   console.log("running");
 });
 
