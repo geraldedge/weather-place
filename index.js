@@ -119,7 +119,7 @@ route.styles = (d) => {
 
 route.weather = (d) => {
   return new Promise((resolve, reject) => {
-    if(d.method==='POST'){
+    console.log(d)
 
     
     geocode(d.payload.city).then((i) => {
@@ -145,15 +145,9 @@ route.weather = (d) => {
         });
       }
     });
-  }
-  else{
-    resolve({
-      statusCode: 200,
-      payload: 'not suited method',
-      contentType: "json",
-    });
+  
 
-  }
+  
   });
 };
 

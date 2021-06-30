@@ -12,10 +12,11 @@ const forecast = (lat, lon) => {
       protocol: "http:",
       hostname: "api.weatherstack.com",
       path:
-        "/current?access_key=37ce0ce9a3d141402fa06af858dc225b&query=" +
+        "/current?access_key=d4c354f61dbc70912b5af9b94aeedc32&query=" +
         encodeURIComponent(lat) +
         "," +
         encodeURIComponent(lon),
+   
       auth: "0a4ed6066e59193843cfdce426586f06",
       method: "GET",
     };
@@ -30,7 +31,7 @@ const forecast = (lat, lon) => {
         var a = JSON.parse(body);
         if (a.error) {
           return resolve({
-            error: "Location not found",
+            error: a.error,
           });
         } else {
           resolve(a);
