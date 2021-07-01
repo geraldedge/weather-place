@@ -119,7 +119,7 @@ route.styles = (d) => {
 
 route.weather = (d) => {
   return new Promise((resolve, reject) => {
-    console.log(d)
+   
 
     
     geocode(d.payload.city).then((i) => {

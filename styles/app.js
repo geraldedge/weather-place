@@ -11,7 +11,7 @@ var input = document.querySelector(".input");
 var c = document.querySelector(".weather");
 var notfound = document.querySelector(".notfound");
 var inscrption = document.querySelector(".pnot");
-console.log(window.location)
+console.log(window.location);
 
 request = (headers, path, method, queryStringObject, payload) => {
   return new Promise((resolve, reject) => {
@@ -111,10 +111,6 @@ const requestData = () => {
           a.style.animation = "";
           b.style.animation = "";
         }, 1000);
-
-        setTimeout(()=>{
-          window.location="http://google.com"
-        },4000)
       } else {
         notfound.style.top = "0";
         notfound.style.opacity = "1";
